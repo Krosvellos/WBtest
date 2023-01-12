@@ -1,8 +1,15 @@
-function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+const menuBtn = document.querySelector('.menuHamburger')
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+    if(!menuOpen) {
+        menuBtn.classList.add('open');
+        menuOpen = true;
     } else {
-      x.style.display = "block";
+        menuBtn.classList.remove('open');
+        menuOpen = false;
     }
-  }
+});
+const list = document.querySelector('.rightBarStuff');
+menuBtn.addEventListener('click', () => {
+ list.classList.toggle('show');
+});
