@@ -1,8 +1,21 @@
+html {
+  margin: 0;
+  min-height: 100%;
+}
+
 body {
-  background-image: url(img/pexels-moose-photos-1037992.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  z-index: -1;
+  margin: 0;
+}
+
+#background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  filter: brightness(1.2);
+  z-index: -2;
 }
 
 /* Stylizace headeru pomocí pozadí a padding */
@@ -13,7 +26,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgb(19, 25, 41);
   text-decoration: none;
   position: fixed;
   top: 0;
@@ -30,11 +43,13 @@ body {
   line-height: 25px;
   border-radius: 0px;
   font-family: Montserrat;
+  
 }
 /* Stylizace logo odkazu */
 .header img {
   width: 70px;
   margin-top: 5px;  
+  margin-left: 10px;
 }
 .header img:hover {
   transform: translateY(-3%);
@@ -45,8 +60,8 @@ body {
 
 
 .header a:hover {
-  background-color: rgb(165, 172, 181);
-  color: black;
+  text-shadow: 0 0 5px rgb(116, 110, 116), 0 0 12px rgb(199, 176, 200), 0 0 20px rgb(241, 228, 241);
+  color: white;
 }
 
 .header a.active {
@@ -182,4 +197,141 @@ body {
 
 .layer1Source {
   color: white;
+}
+
+.layer2Bg {
+  background-image: linear-gradient(rgb(58, 52, 57),rgb(100, 43, 84)); 
+  margin-top: 18em;
+}
+
+.layer2Content {
+  padding-top: 1em;
+}
+
+.layer2Heading {
+  font-size: 2em;
+  text-align: center;
+  color: white;
+  margin: 0.5em 1em 1.5em 1em;
+  font-family: "Montserrat";
+
+}
+
+.layer2InfoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 2.5em;    
+  flex-wrap: wrap;
+}
+
+.gameContainer, .fanartContainer, .musicContainer, .heyMisterContainer, .fumoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 0px;
+}
+
+.gameImage, .fanartImage, .musicVideo, .heyMisterImage, .fumoImage {
+  width: 12em;
+  height: 14em;
+  object-fit: cover;
+  border: 0.3em solid rgb(255, 255, 255);
+  border-radius: 1.5em;
+  box-shadow: 0 10px 30px black;
+  transition: 0.3s;
+  margin: -0.5em -1em -1em -1em;
+}
+
+.gameImage:hover, .fanartImage:hover, .musicVideo:hover, .heyMisterImage:hover, .fumoImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgb(214, 34, 190);
+}
+
+.fanartSource {
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: -2em;
+}
+
+.linkI {
+  margin: 1em 2em 0 2em;
+  border-radius: 1.5em;
+}
+
+.gameSubtext, .fanartSubtext, .musicSubtext, .heyMisterSubtext, .fumoSubtext {
+  text-align: center;
+  color: white;
+  font-size: 1.7em;
+  margin: 1em 0 1em 0;
+  font-family: "Montserrat";
+  z-index: 2;
+}
+
+.stuff {
+  font-style: italic;
+}
+
+.layer3 {
+  background-image: url(img/japan-anime-scenery-wallpaper-featuring-beautiful-pink-cherry-trees-mount-fuji-background_685067-1795\ \(1\).webp);
+  background-size: cover;
+  object-fit: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: brightness(1.1);
+}
+
+.layer3BgSource {
+  background: black;
+  border-radius: 1em;
+  position: absolute;
+  padding: 7px;
+  color: white;
+  display: block;
+  bottom: 5px;
+}
+
+.layer3Text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(234, 234, 239);
+  border-radius: 1em;
+  text-shadow: 0 0 1em rgb(67, 46, 70), 0 0 2em rgb(55, 29, 59);
+  font-family: "Montserrat";
+  letter-spacing: 0.1em;
+  margin: 11em 0;
+}
+
+.layer3Quote {
+  font-size: 3em;
+  text-align: center;
+  font-style: italic;
+}
+.layer3QuoteFrom {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 2em;
+}
+
+.footerLayerBg {
+  background: rgb(19, 25, 41);
+  padding: 1.25em 0;
+  box-shadow: 0 0 1em rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}  
+
+.footerLayerAuthor {
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  font-family: "izayoi";
 }
